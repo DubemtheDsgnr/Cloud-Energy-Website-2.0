@@ -1,6 +1,5 @@
-# Cloud Energy Website
-
-Website for Cloud Energy Photoelectric Limited (cloudenergy.com.ng): solar, storage, financing and Cloud Ride electric mobility.
+# Cloud-Energy-Website-2.0
+A redesign of the Cloud Energy Solutions website (cloudenergy.com.ng), a Nigerian solar, inverter and battery company. Built mobile first with colours from the brand logo, clearer navigation, stronger trust signals and simple paths to energy audits, SEPP financing, services and partnerships. Product Design by Ifedubem Ezike (DubemtheDsgnr).
 
 ## What is in this folder
 
