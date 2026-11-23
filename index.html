@@ -1605,6 +1605,14 @@ p { margin: 0; }
 .lgrid figcaption { position: absolute; inset: auto 0 0 0; padding: 28px 12px 10px; font-size: 12.5px; font-weight: 600; color: #fff; background: linear-gradient(0deg, rgba(4,24,42,.85), transparent); }
 @media (max-width: 1000px) { .lgrid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
 @media (max-width: 700px) { .lgrid { grid-template-columns: repeat(2, minmax(0, 1fr)); } .lgrid figure:first-child { grid-column: span 2; grid-row: auto; aspect-ratio: 4 / 3; } }
+
+.lgrid { grid-auto-flow: dense; grid-auto-rows: 200px; }
+.lgrid figure, .lgrid figure:first-child { aspect-ratio: auto; grid-column: auto; grid-row: auto; }
+.lgrid figure.big { grid-column: span 2; grid-row: span 2; }
+.lgrid figure.tall { grid-row: span 2; }
+.lgrid figure.wide { grid-column: span 2; }
+@media (max-width: 1000px) { .lgrid { grid-auto-rows: 180px; } }
+@media (max-width: 700px) { .lgrid { grid-auto-rows: 150px; } .lgrid figure.wide { grid-column: span 2; } }
 </style>
 </head>
 <body>
