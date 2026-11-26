@@ -69,23 +69,24 @@
       intro: 'Our mini-grid solutions bring reliable electricity to remote communities, powering homes, businesses and essential services. We combine solar power with smart technology to create sustainable local energy ecosystems.',
       cards: [['What it covers', 'Mini-grids provide whole-community power, integrating solar generation, energy storage, distribution and smart metering. They replace expensive, polluting diesel generators with clean, reliable 24/7 power.'],
         ['Solar + Storage + Smart Metering', 'A clean, reliable power supply that enables productive use of energy, business growth, improved healthcare and education, and a higher quality of life for community members.']],
-      sites: [['Obe Aweba — Ikwo, Ebonyi State', 'Isolated hybrid mini-grid serving residential & local healthcare', '60 kWp', '144 kWh', 'Active • 99% uptime', 'green'],
-        ['Garin — Fufore, Adamawa State', 'Commercial cluster powering local agricultural processing & public lighting', '120 kWp', '250 kWh', 'Hybrid BESS', 'amber'],
-        ['Otter — Aguantam, Anambra State', 'Under-grid reinforcement with battery buffer for uninterrupted energy', '90 kWp', '180 kWh', 'On-grid + BESS', '']] },
+      // Selected deployments: correct list to come from the Projects department (Kenny). Format: [site, description, solar, storage, status, 'green'|'amber'|'']
+      sites: [] },
     { id: 'solar-home', name: 'Solar Home Systems', big: '10K+', bigLabel: 'Homes powered', tags: ['Rooftop PV arrays', 'Pay-as-you-go integration', 'Smart pre-paid metering'],
       metrics: [['Satisfaction rate', '98.5%'], ['Daily generation', '45 MWh'], ['Architecture', 'Lithium BESS']], img: 'sun-s02',
       eyebrow: 'Solar home systems', title: 'Affordable clean energy for individual households',
       intro: 'Our solar home systems deliver continuous, standalone electricity directly to families. They are engineered for durability, easy daily use and zero recurring fuel expenses.',
       cards: [['Standalone reliable power', 'Standalone solar systems bringing power, lighting and cooling directly to homes without depending on erratic grid supply.'],
         ['Families & micro-enterprises', 'Households, residential families and micro-enterprises, with accessible pay-as-you-go and financed smart metering options.'],
-        ['Silent, zero-fuel electricity', '24/7 reliability, no fuel or noise, automated battery health control and minimal routine maintenance.']] },
-    { id: 'cloud-zero', name: 'Cloud Zero', big: '24/7', bigLabel: 'Monitoring of the supervised fleet', tags: ['IoT telemetry', 'Grid automation', 'Predictive maintenance'],
-      metrics: [['Supervised nodes', '10,000+'], ['System availability', '99.9%'], ['Architecture', 'SCADA / 4G LTE']], img: 'hyb-s04',
-      eyebrow: 'Cloud Zero', title: 'Smart monitoring and control',
-      intro: 'Cloud Zero is our energy management platform for monitoring and controlling Cloud Energy solar installations, keeping every system performing and maintained.',
-      cards: [['Operational excellence', 'Built-in energy management supports installation-level supervision, providing the stability and control needed for maximum performance and uptime.'],
-        ['Fleet-wide integration', 'Cloud Zero applies across all types of energy installations, turning conventional setups into modern, responsive systems.'],
-        ['Predictive & autonomous', '24/7 supervision of power output keeps inverters and storage working optimally, with proactive fault diagnostics and 99.9% operational uptime.']] },
+        ['Silent, zero-fuel electricity', '24/7 reliability, no fuel or noise, automated battery health control and minimal routine maintenance.']],
+      // Selected deployments for solar home systems: list and deployment photos to come from Kenny
+      sites: [] },
+    { id: 'cloud-zero', name: 'Buy Now, Pay Later', big: '1–5kVA', bigLabel: 'Complete solar packages', tags: ['Complete solar packages', 'Cloud Pay instalments', 'Partner bank finance'],
+      metrics: [['Pay over', '3–18 months'], ['Packages', '4'], ['Partner banks', 'Stanbic IBTC · Access · FCMB']], img: 'hyb-s04',
+      eyebrow: 'Buy Now, Pay Later', title: 'Go solar today, pay over time',
+      intro: 'Buy Now, Pay Later is our range of complete solar packages for homes and small businesses, with an inverter, batteries, a charge controller and solar panels in one order, paid for in instalments.',
+      cards: [['Four package sizes', 'Solar Ruby (1kVA), Solar Opal (2kVA), Solar Emerald (3.6kVA) and Solar Sapphire (5kVA), with lithium ion or tubular battery options on some packages.'],
+        ['Cloud Pay instalments', 'Pay a fixed initial deposit, then spread the balance over 3 to 18 months.'],
+        ['Partner bank finance', 'Finance through Stanbic IBTC, Access Bank or FCMB under the Solar Easy Payment Programme, on each bank’s terms.']] },
     { id: 'rooftop', name: 'Rooftop Solar', big: '200+', bigLabel: 'Commercial installations', tags: ['Utility grid intertie', 'Substation & transformer sync', '40% diesel & tariff displacement'],
       metrics: [['Average cost savings', '40%'], ['Total installations', '200+'], ['Grid coupling', 'HV / MV transformer']], img: 'solar-s02',
       eyebrow: 'Rooftop solar', title: 'Commercial energy savings and carbon reduction',
@@ -113,13 +114,13 @@
       ['Which battery types does Cloud Energy offer?', 'Our range includes LiFePO4 lithium ion batteries from 960Wh to 16.07kWh. Our low frequency inverters also work with AGM, gel and tubular batteries. The right option depends on your system design and storage needs.'],
       ['What is a mini grid?', 'A mini grid is distributed energy infrastructure that provides electricity to a community where conventional grid service is limited or unreliable. Our projects combine solar generation, battery storage, community distribution and energy management.'],
       ['What is rooftop solar?', 'Rooftop solar uses available roof space to generate electricity for a business or institution. Our service covers system design, equipment selection, installation and support.']] },
-    { g: 'Cloud Zero', q: [
-      ['What is Cloud Zero?', 'Cloud Zero is our range of complete rooftop solar packages. Each package combines a Cloud Energy inverter, batteries, a charge controller and solar panels, so a home or small business can run on solar power with little or no fuel spend.'],
-      ['Which Cloud Zero packages are available?', 'The range runs from 1kVA to 5kVA: Solar Ruby (1kVA), Solar Opal (2kVA), Solar Emerald (3.6kVA) and Solar Sapphire (5kVA). Some packages come with a lithium ion or a tubular battery option.'],
-      ['What is inside a Cloud Zero package?', 'As an example, the 2kVA Cloud Zero Solar Opal Lithium Ion package includes a 2kVA/24V home inverter, two 75Ah/25.6V lithium batteries, an 80A charge controller and six 410W solar panels.'],
-      ['Who is Cloud Zero for?', 'Homes, small and medium businesses, offices and small health centres that need dependable power for lighting, fans, TVs, fridges, computers and other essential equipment.'],
-      ['How do I buy a Cloud Zero package?', 'Buy online on the Cloud Energy eShop, or pay over time through Cloud Pay or one of our partner banks under the Solar Easy Payment Programme. Our team can also assess your load and recommend the right size.'],
-      ['Is installation included?', 'Ask the team when you order. We install and commission Cloud Zero packages and can confirm what is included for your location.']] },
+    { g: 'Buy Now, Pay Later', q: [
+      ['What is Buy Now, Pay Later?', 'Buy Now, Pay Later is our range of complete rooftop solar packages that you can pay for over time. Each package combines a Cloud Energy inverter, batteries, a charge controller and solar panels, so a home or small business can run on solar power with little or no fuel spend.'],
+      ['Which Buy Now, Pay Later packages are available?', 'The range runs from 1kVA to 5kVA: Solar Ruby (1kVA), Solar Opal (2kVA), Solar Emerald (3.6kVA) and Solar Sapphire (5kVA). Some packages come with a lithium ion or a tubular battery option.'],
+      ['What is inside a Buy Now, Pay Later package?', 'As an example, the 2kVA Solar Opal Lithium Ion package includes a 2kVA/24V home inverter, two 75Ah/25.6V lithium batteries, an 80A charge controller and six 410W solar panels.'],
+      ['Who is Buy Now, Pay Later for?', 'Homes, small and medium businesses, offices and small health centres that need dependable power for lighting, fans, TVs, fridges, computers and other essential equipment.'],
+      ['How do I pay for a package?', 'Pay over time through Cloud Pay or one of our partner banks under the Solar Easy Payment Programme. Our team can also assess your load and recommend the right size.'],
+      ['Is installation included?', 'Ask the team when you order. We install and commission Buy Now, Pay Later packages and can confirm what is included for your location.']] },
     { g: 'Installation, Maintenance And Support', q: [
       ['Does Cloud Energy install energy systems?', 'Yes. Installation and commissioning are core services. Our technical team handles installation with attention to system performance and safety. Contact us to confirm scope and availability for your location.'],
       ['Can I get maintenance after installation?', 'Yes. Maintenance and after sales support are part of our services. Ask the team which maintenance options apply to your system and how to arrange a visit.'],
@@ -273,7 +274,7 @@
     document.body.appendChild(d); d.querySelector('a').focus();
   }
   function bulkBanner() {
-    return `<section class="bulk"><div class="wrap"><span class="out">Commercial &amp; Residential Installations</span><h2>Need Solar for Your Home or Business?</h2><p>From single homes to estates, schools and factories, our engineers size, supply and install the right system for your load.</p><div class="btns" style="justify-content:center">${quoteBtn('Request Quote ' + AR, 'Commercial Solar')}<a class="btn white" href="#contact">Speak with an Engineer</a></div></div></section>`;
+    return `<section class="bulk"><div class="wrap"><span class="out">Commercial &amp; Residential Installations</span><h2>Need Solar for Your Home, Business or Community?</h2><p>From single homes to estates, schools and factories, our engineers size, supply and install the right system for your load.</p><div class="btns" style="justify-content:center">${quoteBtn('Request Quote ' + AR, 'Commercial Solar')}<a class="btn white" href="#contact">Speak with an Engineer</a></div></div></section>`;
   }
   function footer() {
     const col = (h, items) => `<div><h4>${h}</h4><ul>${items.map(([n, href, q]) => `<li>${q ? `<a href="#quote" data-quote="Solar Products" data-msg="${esc(q)}">${n}</a>` : `<a href="#${href}">${n}</a>`}</li>`).join('')}</ul></div>`;
@@ -404,10 +405,10 @@
         <div style="display:grid;gap:18px">${[[I.clock, 'Cloud Pay instalments', 'A fixed initial deposit, then 3 to 18 months for 1kVA – 6.5kVA systems.'], [I.bank, 'Participating banks', 'Finance through Stanbic IBTC, Access Bank or FCMB, on each bank’s terms.'], [I.audit, 'Sized by an energy audit', 'Systems from 1kVA to 6.5kVA, matched to your actual load.']].map(b => `<div class="benefit"><span class="bi">${b[0]}</span><div><b>${b[1]}</b><p>${b[2]}</p></div></div>`).join('')}</div>
         <div><a class="btn navy lg" href="#financing">Apply for Payment Plan ${AR}</a></div></div></div></section>`
       + `<section class="sec pale"><div class="wrap">${head('Our impact', 'Power That Changes Communities', '', true)}<div class="ovgrid">
-        ${ov({ cls: 'a', href: '#projects', attrs: 'data-ptab="0"', img: PH('mini-main'), pill: 'Mini grid · Ebonyi State', stat: ['60 kWp', '+ 144 kWh storage'], title: 'Obe Aweba Mini Grid', text: 'Homes and a local health centre on clean power, 99% uptime.', go: 'View project' })}
+        ${ov({ cls: 'a', href: '#projects', attrs: 'data-ptab="0"', img: PR('akwarata-powerhouse'), pill: 'Ebonyi State', stat: ['50 kW', 'hybrid solar system'], title: 'Akwarata Agbaja', text: 'A Cloud Energy hybrid solar system with battery storage serving the Akwarata Agbaja community.', go: 'View projects' })}
         ${ov({ cls: 'w2', href: '#projects', attrs: 'data-ptab="3"', img: PH('rooftop'), pill: 'Rooftop solar', stat: ['200+', 'commercial installations'], title: 'Rooftop Solar', go: 'Explore' })}
         ${ov({ href: '#projects', attrs: 'data-ptab="1"', img: PH('shs-main'), pill: 'Homes', stat: ['10K+', 'homes'], title: 'Solar Home Systems', go: 'Explore' })}
-        ${ov({ href: '#projects', attrs: 'data-ptab="2"', img: PH('zero-main'), pill: 'Monitoring', stat: ['24/7', 'supervision'], title: 'Cloud Zero', go: 'Explore' })}</div></div></section>`
+        ${ov({ href: '#projects', attrs: 'data-ptab="2"', img: PH('zero-main'), pill: 'Pay over time', stat: ['3–18', 'months to pay'], title: 'Buy Now, Pay Later', go: 'Explore' })}</div></div></section>`
       + fieldGallery()
       + testimonials()
       + `<section class="sec hpeople"><div class="wrap hp-grid"><div class="hp-copy"><span class="tag">Our people</span><h2 class="h-sec">The People Behind the Power</h2><p class="lead">Engineers, project managers and support staff who design, install and look after every Cloud Energy system, led by a team with over a decade in Nigerian solar.</p><div class="btns"><a class="btn navy" href="#about">Meet Our Team ${AR}</a><a class="btn outline" href="#careers">Join Us</a></div></div>
@@ -723,7 +724,7 @@
         <div class="photo" style="aspect-ratio:4/3"><img src="${REAL[p.id] ? PR(REAL[p.id]) : PH(main)}" alt="${esc(p.name)}, a Cloud Energy installation"><span class="badge">${esc(p.big)} ${esc(p.bigLabel)}</span></div></div></section>
       <section class="sec darkband"><div class="wrap"><div class="bento">${bx({ v: p.big, raw: 1, label: p.bigLabel, sub: p.name, tone: 'amber', gold: true, cls: 'tall', extra: `<div class="bars" aria-hidden="true"><i style="height:45%"></i><i style="height:70%"></i><i style="height:100%"></i></div>` })}${p.metrics.slice(0, 2).map((mt, i) => bx({ v: mt[1], raw: !splitVal(mt[1]), label: mt[0], tone: i ? 'blue' : 'silver' })).join('')}</div>${p.metrics[2] ? `<div class="bento3">${[p.metrics[2]].concat(p.tags.slice(0, 2).map(t => ['Includes', t])).map((mt, i) => bx({ v: mt[1], raw: 1, label: mt[0], tone: ['blue', 'amber', 'silver'][i], gold: i === 1, small: 1 })).join('')}</div>` : ''}</div></section>
       <section class="sec pale"><div class="wrap"><div class="grid ${p.cards.length === 3 ? 'g3' : 'g2'}">${p.cards.map((cd, i) => `<div class="card hov"><span class="icn">${[I.sun, I.users, I.shield][i]}</span><h3 class="h-card">${esc(cd[0])}</h3><p>${esc(cd[1])}</p></div>`).join('')}</div>
-      ${p.sites ? `<div style="margin-top:56px"><div class="head"><span class="tag">Project sites</span><h2 class="h-cat">Selected deployments</h2></div><div style="display:grid;gap:12px">${p.sites.map(s => `<div class="site-row"><div class="kv"><b>${esc(s[0])}</b><span class="note">${esc(s[1])}</span></div><div class="kv"><small>Solar</small><b style="color:var(--navy)">${s[2]}</b></div><div class="kv"><small>Storage</small><b style="color:var(--navy)">${s[3]}</b></div><span class="st ${s[5]}">${esc(s[4])}</span></div>`).join('')}</div></div>` : ''}</div></section></div>
+      ${p.sites && p.sites.length ? `<div style="margin-top:56px"><div class="head"><span class="tag">Project sites</span><h2 class="h-cat">Selected deployments</h2></div><div style="display:grid;gap:12px">${p.sites.map(s => `<div class="site-row"><div class="kv"><b>${esc(s[0])}</b><span class="note">${esc(s[1])}</span></div><div class="kv"><small>Solar</small><b style="color:var(--navy)">${s[2]}</b></div><div class="kv"><small>Storage</small><b style="color:var(--navy)">${s[3]}</b></div><span class="st ${s[5]}">${esc(s[4])}</span></div>`).join('')}</div></div>` : ''}</div></section></div>
       <section class="sec livegal"><div class="wrap">${head('Live from our sites', 'Installations Across Nigeria', 'Recent mini grid and storage projects in Ebonyi and Taraba, photographed by our field teams.', true)}<div class="lgrid">${LIVE.map(([k, c, sz]) => `<figure class="${sz || ''}"><img src="${PR(k)}" alt="${esc(c)}" loading="lazy"><figcaption>${esc(c)}</figcaption></figure>`).join('')}</div></div></section>` + bulkBanner();
   }
 
@@ -1096,7 +1097,7 @@
   }
   function story() {
     const d = document.createElement('div'); d.className = 'lightbox'; d.setAttribute('role', 'dialog'); d.setAttribute('aria-label', 'Featured story');
-    d.innerHTML = `<div class="lb-in"><img src="${PH('mini-main')}" alt="Obe Aweba solar mini grid"><div class="lbt"><span class="tag">Featured story</span><h3 class="h-cat">Obe Aweba Mini Grid, Ebonyi State</h3><p class="lead">An isolated hybrid mini grid with 60 kWp of solar and 144 kWh of storage, serving homes and local healthcare with 99% uptime.</p><div class="btns"><a class="btn" href="#projects" data-close>Explore Projects ${AR}</a><button class="btn outline" data-close>Close</button></div></div></div>`;
+    d.innerHTML = `<div class="lb-in"><img src="${PR('akwarata-powerhouse')}" alt="Akwarata Agbaja hybrid solar system"><div class="lbt"><span class="tag">Featured story</span><h3 class="h-cat">Akwarata Agbaja, Ebonyi State</h3><p class="lead">A 50kW Cloud Energy hybrid solar system with battery storage serving the Akwarata Agbaja community.</p><div class="btns"><a class="btn" href="#projects" data-close>Explore Projects ${AR}</a><button class="btn outline" data-close>Close</button></div></div></div>`;
     d.addEventListener('click', e => { if (e.target === d || e.target.closest('[data-close]')) d.remove(); });
     document.body.appendChild(d); d.querySelector('button[data-close]').focus();
   }
