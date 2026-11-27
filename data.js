@@ -228,7 +228,7 @@ window.CE_DATA = (function () {
     {
       id: 'cold-storage', name: 'Freezer', short: 'Cold Storage', range: '80L – 339L',
       blurb: 'AC/DC freezers from 150L to 318L, an 80L vaccine fridge and a 339L chiller.',
-      img: 'cold-s03', group: 'Energy Appliances',
+      img: 'cold-s04', group: 'Energy Appliances',
       models: [
         { id: 'freezer-150l', name: '150L AC / DC Freezer', img: 'cold-s03', featured: true,
           short: '12/24V 75W cabinet, 6.5kg / 24h freezing capacity and 220 – 240V AC operation, with R134a refrigerant.',
