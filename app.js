@@ -1,7 +1,8 @@
 (function () {
   'use strict';
   const D = window.CE_DATA;
-  const IMG = k => 'img/' + k + '.webp';
+  const IV = '?v=3';
+  const IMG = k => 'img/' + k + '.webp' + IV;
   const esc = s => String(s == null ? '' : s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
   const app = document.getElementById('app');
   const CONTACT = {
@@ -212,8 +213,8 @@
   }
   const WAVES = (c1, c2) => `<svg class="waves" viewBox="0 0 600 400" preserveAspectRatio="none" aria-hidden="true"><defs><linearGradient id="wg${c1.slice(1)}" x1="0" x2="1"><stop offset="0" stop-color="${c1}" stop-opacity="0"/><stop offset=".5" stop-color="${c1}"/><stop offset="1" stop-color="${c2}" stop-opacity=".2"/></linearGradient></defs><path stroke="url(#wg${c1.slice(1)})" d="M-20 330 C 120 300, 240 360, 360 250 S 560 90, 640 40"/><path stroke="url(#wg${c1.slice(1)})" d="M-20 360 C 140 330, 260 380, 380 280 S 560 140, 640 90"/><path stroke="url(#wg${c1.slice(1)})" d="M-20 300 C 100 270, 220 330, 340 220 S 540 60, 640 10"/></svg>`;
   const CUT = new Set('bulb-s01 bulb-s02 bulb-s03 bulb-s04 bulb-s05 bulb-s06 bulb-s07 bulb-s08 bulb-s09 bulb-s11 cold-s04 cold-s06 cold-s07 fan-s02 fan-s04 fan-s06 fan-s08 fan-s10 hyb-s02 hyb-s04 hyb-s06 hyb-s08 lf-s02 lf-s06 lf-s08 lf-s10 lf-s12 lith-s02 lith-s04 lith-s06 lith-s08 lith-s10 mppt-s06 solar-s02 solar-s06 street-01 street-02 street-03 street-04 sun-s02 sun-s04 sun-s06 sun-s08 sun-s10'.split(' '));
-  const SRC = k => CUT.has(k) ? 'img/cut/' + k + '.webp' : IMG(k);
-  const prodVis = k => CUT.has(k) ? `<img class="bx-img cut" src="img/cut/${k}.webp" alt="" loading="lazy">` : `<div class="bx-stage"><img src="${IMG(k)}" alt="" loading="lazy"></div>`;
+  const SRC = k => CUT.has(k) ? 'img/cut/' + k + '.webp' + IV : IMG(k);
+  const prodVis = k => CUT.has(k) ? `<img class="bx-img cut" src="img/cut/${k}.webp${IV}" alt="" loading="lazy">` : `<div class="bx-stage"><img src="${IMG(k)}" alt="" loading="lazy"></div>`;
   function splitVal(v) {
     const m = String(v).match(/^([\d.,]+(?:\s*[–-]\s*[\d.,]+)?)\s*([A-Za-z%×°]{0,5})(?:\b|$)\s*(.*)$/);
     if (!m || /^[\/,(]/.test(m[3]) || m[3].length > 14) return null;
@@ -250,7 +251,7 @@
   }
   function megaHTML(k) {
     const top = (title, n, label, href) => `<div class="mega-top"><h3>${title} <span class="count">${n}</span></h3><a class="btn sm" href="#${href}">${label} ${AR}</a></div>`;
-    if (k === 'products') return top('Product Categories', D.cats.length + ' Categories', 'View All Products', 'products') + `<div class="mgrid">${D.cats.map(c => `<a class="mcard" href="#c-${c.id}"><div class="mi">${CUT.has(c.img) ? `<img src="img/cut/${c.img}.webp" alt="">` : `<img class="ph" src="${IMG(c.img)}" alt="">`}</div><div class="mb"><b>${esc(c.name)}</b><span>${esc(c.range)}</span><span class="link">View Products ${AR}</span></div></a>`).join('')}</div>`;
+    if (k === 'products') return top('Product Categories', D.cats.length + ' Categories', 'View All Products', 'products') + `<div class="mgrid">${D.cats.map(c => `<a class="mcard" href="#c-${c.id}"><div class="mi">${CUT.has(c.img) ? `<img src="img/cut/${c.img}.webp${IV}" alt="">` : `<img class="ph" src="${IMG(c.img)}" alt="">`}</div><div class="mb"><b>${esc(c.name)}</b><span>${esc(c.range)}</span><span class="link">View Products ${AR}</span></div></a>`).join('')}</div>`;
     if (k === 'services') return top('Our Services', SERVICES.length + ' Services', 'View All Services', 'services') + `<div class="mgrid photo">${SERVICES.map(s => `<a class="mcard" href="#services" data-svc="${s.id}"><div class="mi"><img class="cover" src="${SVC_IMG[s.id]}" alt="" loading="lazy"></div><div class="mb"><b>${esc(s.title)}</b><span>${esc(s.home.split('.')[0])}.</span><span class="link">View Service ${AR}</span></div></a>`).join('')}</div>`;
     return top('Our Projects', PROJECTS.length + ' Program Areas', 'View All Projects', 'projects') + `<div class="mgrid two">${PROJECTS.map((p, i) => `<a class="mcard" href="#projects" data-ptab="${i}" style="grid-template-columns:200px 1fr;grid-template-rows:auto"><div class="mi" style="height:100%"><img class="cover" src="${PH(PROJ_IMG[p.id][0])}" alt="" loading="lazy"></div><div class="mb" style="padding:16px"><span class="label">${esc(p.big)} ${esc(p.bigLabel)}</span><b>${esc(p.name)}</b><span>${esc(p.title)}</span><span class="link">View Project ${AR}</span></div></a>`).join('')}</div><a class="mev" href="#cloud-ride"><span class="tag dot">New</span><b>Cloud Ride</b><span>Electric mobility by Cloud Energy</span><span class="link">Discover ${AR}</span></a>`;
   }
@@ -324,7 +325,7 @@
     return `<div class="lb">
       <figure class="lc l-photo" style="--n:0"><img src="${c.photo}" alt="" loading="lazy"><figcaption><span class="pill">${esc(c.tag)}</span><b>${esc(x.name)}</b></figcaption></figure>
       <div class="lc l-stat" style="--n:1">${WAVES('#1190C8', '#9ED8F5')}<div class="l-num"><span class="g-navy" ${num}>${esc(c.stat[0])}</span><small class="g-navy">${esc(c.stat[1])}</small></div><span class="l-lbl">${esc(c.stat[2])}</span></div>
-      ${c.prod ? `<div class="lc l-prod" style="--n:2"><div class="l-stage">${CUT.has(c.prod[0]) ? `<img src="img/cut/${c.prod[0]}.webp" alt="">` : `<img class="mb" src="${IMG(c.prod[0])}" alt="">`}</div><b>${esc(c.prod[1])}</b><span>${esc(c.prod[2])}</span></div>`
+      ${c.prod ? `<div class="lc l-prod" style="--n:2"><div class="l-stage">${CUT.has(c.prod[0]) ? `<img src="img/cut/${c.prod[0]}.webp${IV}" alt="">` : `<img class="mb" src="${IMG(c.prod[0])}" alt="">`}</div><b>${esc(c.prod[1])}</b><span>${esc(c.prod[2])}</span></div>`
         : `<figure class="lc l-photo2" style="--n:2"><img src="${c.photo2}" alt="" loading="lazy"></figure>`}
       <div class="lc l-stat2" style="--n:3">${WAVES('#F9A930', '#FFE7B8')}<div class="l-num sm"><span class="g-amber2">${esc(c.stat2[0])}</span></div><span class="l-lbl">${esc(c.stat2[1])}</span></div>
       <div class="lc l-chips" style="--n:4">${c.chips.map((t, i) => `<span style="--i:${i}">${I.check}${esc(t)}</span>`).join('')}</div></div>`;
@@ -1183,7 +1184,7 @@
     el.innerHTML = `<div class="intro-aurora"></div><div class="intro-lines"></div>
       <div class="intro-stage"><div class="intro-orbit">${items.map((k, i) => {
         const ang = (i / n) * Math.PI * 2 - Math.PI / 2;
-        return `<span class="intro-item" style="--ex:${Math.cos(ang).toFixed(3)};--ey:${Math.sin(ang).toFixed(3)};--sx:${(Math.cos(ang) * 2.2).toFixed(2)};--sy:${(Math.sin(ang) * 2.2).toFixed(2)};--d:${(0.35 + i * 0.07).toFixed(2)}s"><img src="img/cut/${k}.webp" alt=""></span>`;
+        return `<span class="intro-item" style="--ex:${Math.cos(ang).toFixed(3)};--ey:${Math.sin(ang).toFixed(3)};--sx:${(Math.cos(ang) * 2.2).toFixed(2)};--sy:${(Math.sin(ang) * 2.2).toFixed(2)};--d:${(0.35 + i * 0.07).toFixed(2)}s"><img src="img/cut/${k}.webp${IV}" alt=""></span>`;
       }).join('')}</div>
         <div class="intro-core"><svg class="intro-arc" viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="50" r="48"/></svg><img class="intro-logo" src="img/logo.png" alt="Cloud Energy"></div></div>
       <div class="intro-copy"><span>Welcome to the home of</span><b>${word}</b><em>energy for a better life</em></div>
